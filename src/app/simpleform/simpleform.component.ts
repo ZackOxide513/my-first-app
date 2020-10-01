@@ -8,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class SimpleformComponent implements OnInit {
   buttonState = false;
   userName = '';
+  displayState = false;
+  logs = [];
 
   constructor() { 
     this.buttonState = false;
     this.userName = '';
+    this.displayState = false;
   }
 
   updateButtonState() {
@@ -27,9 +30,11 @@ export class SimpleformComponent implements OnInit {
     this.userName = '';
   }
 
-
+  onClickToggle() {
+    this.displayState = !this.displayState;
+    this.logs.push(Date());
+  }
 
   ngOnInit(): void {
   }
-
 }

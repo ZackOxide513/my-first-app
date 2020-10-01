@@ -1,3 +1,7 @@
 <input type="text" class="form-control" [(ngModel)]="userName">
 <p>{{ userName }}</p>
 <button class="btn btn-large btn-primary" [disabled]="updateButtonState()" (click)="resetUserName()">Submit</button>
+<hr>
+<button class="btn btn-large btn-primary" (click)="onClickToggle()">Display Details</button>
+<p *ngIf="displayState">I have no idea what should be typed here but some text must be displayed so I got to put something here to be displayed when someone click that button.</p>
+<div *ngFor="let item of logs; let i=index" [ngClass]="{ 'above': i>=4}">Clicked at {{ item }}</div>

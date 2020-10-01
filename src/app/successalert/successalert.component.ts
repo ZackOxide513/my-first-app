@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./successalert.component.css']
 })
 export class SuccessalertComponent implements OnInit {
-
-  constructor() { }
+  timestamp;
+  
+  constructor() {
+    this.timestamp = Date();
+  }
 
   ngOnInit(): void {
   }
