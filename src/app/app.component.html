@@ -1,10 +1,10 @@
-<app-header></app-header>
+<app-header (AppSelected)="navigateApp($event)"></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <app-recipes></app-recipes>
+            <app-recipes *ngIf="loadedApp === 'recipe'"></app-recipes>
             <hr>
-            <app-shopping-list></app-shopping-list>
+            <app-shopping-list *ngIf="loadedApp === 'shopping-list'" ></app-shopping-list>
         </div>
     </div>
 </div>
