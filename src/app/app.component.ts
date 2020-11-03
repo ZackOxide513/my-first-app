@@ -8,9 +8,9 @@ import { RecipeService } from './recipes/recipe.service';
   providers: [RecipeService]
 })
 export class AppComponent {
-  loadedApp: string = 'recipe';
+  // loadedApp: string = 'recipe';
 
-  navigateApp(name: string) {
-    this.loadedApp = name;
-  }
+  // navigateApp(name: string) {
+  //   this.loadedApp = name;
+  // }
 }
