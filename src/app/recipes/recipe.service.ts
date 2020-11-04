@@ -16,12 +16,16 @@ export class RecipeService {
         [new Ingredient('Prawn', 10), new Ingredient('Squid', 10), new Ingredient('Tom yam sauce', 2)])
     ];
     
-    selectedRecipe = new EventEmitter<Recipe>();
+    // selectedRecipe = new EventEmitter<Recipe>();
 
     constructor(private shoppingListService: ShoppingListService) {}
 
     getRecipes(): Recipe[] {
         return this.recipes.slice();
+    }
+
+    getRecipe(id: number): Recipe {
+        return this.recipes[id];
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {

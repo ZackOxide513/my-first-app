@@ -1,4 +1,4 @@
-<a style="cursor: pointer" class="list-group-item clearfix" (click)="onSelected()">
+<a style="cursor: pointer" class="list-group-item clearfix mb-1" style="border-radius:5px;" [routerLink]="[id]" routerLinkActive="active">
     <div class="float-left">
         <h5> {{recipe.name}} </h5>
         <p> {{recipe.description}} </p>
